@@ -28,15 +28,15 @@ def scrape_tweets(class_name: str, query=None, username=None, limit=100):
 
 
     with open("tmp.txt", "r") as f:
-	lines = f.readlines()
+        lines = f.readlines()
 
-    with open(os.path.join("/content/data", class_name + ".txt", "w") as f:
-    	idx = l.find(">")
-    	tweet = l[idx+2:-1]
-	f.write(tweet)
+    with open(os.path.join("/content/data", class_name + ".txt", "w")) as f:
+        idx = l.find(">")
+        tweet = l[idx+2:-1]
+    f.write(tweet)
 
     os.remove("tmp.txt")
 
 def remove_class(name):
-  os.system("rm content/"+name+".txt")
+    os.system("rm content/"+name+".txt")
 
