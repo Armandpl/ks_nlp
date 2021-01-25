@@ -106,9 +106,9 @@ class nlp_dataset:
       if count > limit:
         break
     
-  def load_from_twitter(self):
-    for fname in os.listdir("content/data"):
+  def load_from_twitter(self, dirname="data"):
+    for fname in os.listdir(dirname):
       class_name = fname.replace(".txt", "")
-      with open(os.path.join("content/data/", fname), "r") as f:
+      with open(os.path.join(dirname, fname), "r") as f:
         for line in f.readlines():
           self.add(line, class_name)

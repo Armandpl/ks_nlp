@@ -26,7 +26,7 @@ def scrape_tweets(class_name: str, query=None, username=None, limit=100):
     # Run
     twint.run.Search(c)
 
-    os.makedirs("content/data", exist_ok=True)
+    os.makedirs("data", exist_ok=True)
     with open("tmp.txt", "r") as f:
         lines = f.readlines()
 
@@ -34,7 +34,7 @@ def scrape_tweets(class_name: str, query=None, username=None, limit=100):
         for l in lines:
             idx = l.find(">")
             tweet = l[idx+2:-1]
-            f.write(tweet)
+            f.write(tweet+"\n")
 
     os.remove("tmp.txt")
 
