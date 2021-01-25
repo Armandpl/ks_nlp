@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ks_nlp", # Replace with your own username
-    version="0.0.3",
+    version="0.0.4",
     author="Armand du Parc Locmaria",
     author_email="adpl33@gmail.com",
     description="NLP Hackathon toolbox",
